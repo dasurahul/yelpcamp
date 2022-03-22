@@ -2,7 +2,7 @@
 
 - [page](https://yelpcamp-rahul.netlify.app)
 
-![YelpCamp](./screenshot.png)
+![YelpCamp](./screenshot.PNG)
 
 ## Built with
 
