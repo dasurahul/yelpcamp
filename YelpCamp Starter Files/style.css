@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --black-color: black;
+  --gray-color: gray;
+  --background-color: #fff8f8;
+  --white-color: white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Archivo", sans-serif;
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.header {
+  width: 80%;
+  margin-inline: auto;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  width: 80%;
+  margin-inline: auto;
+  animation: fromLeft 0.75s ease-out;
+}
+
+.main h1,
+.main p {
+  max-width: 24rem;
+}
+
+.main > h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main > p {
+  margin-bottom: 1.25rem;
+}
+
+.main p {
+  color: var(--gray-color);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+.button:link,
+.button:visited {
+  text-decoration: none;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-weight: bold;
+  display: inline-block;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.25s ease-out;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.button:focus {
+  outline: 0.25rem solid var(--gray-color);
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.hero-image {
+  display: block;
+  height: 100vh;
+  width: 40%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  animation: fromRight 0.75s ease-out;
+}
+
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

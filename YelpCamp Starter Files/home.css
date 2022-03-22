@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --black-color: black;
+  --gray-color: gray;
+  --light-gray-color: #dddddd;
+  --background-color: #fff8f8;
+  --white-color: white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Archivo", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.header {
+  width: 80%;
+  margin-inline: auto;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header a:link,
+.header a:visited {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.header > div:first-child {
+  font-weight: bold;
+}
+
+.header .button:link,
+.header .button:visited {
+  text-decoration: none;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-weight: bold;
+  display: inline-block;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.25s ease-out;
+}
+
+.header .button:focus {
+  outline: 0.25rem solid var(--gray-color);
+}
+
+.header .button:active {
+  transform: scale(0.9);
+}
+
+.main {
+  width: 80%;
+  margin-inline: auto;
+  margin-block: 2rem;
+  min-height: calc(100vh - 6rem);
+}
+
+.background-color {
+  background-color: var(--background-color);
+  padding: 4rem 3rem;
+  border-radius: 0.25rem;
+}
+
+.background-color h1,
+.background-color p {
+  max-width: 22rem;
+  margin-bottom: 1rem;
+}
+
+.background-color p {
+  color: var(--gray-color);
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 0.1rem solid var(--light-gray-color);
+  border-radius: 0.25rem;
+  background-color: var(--white-color);
+}
+
+.input-container img {
+  height: 1.5rem;
+  margin-block: auto;
+}
+
+.input-container input {
+  border: none;
+  font-weight: bold;
+}
+
+.input-container input:focus {
+  outline: none;
+}
+
+.form .button {
+  text-decoration: none;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-weight: bold;
+  display: inline-block;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.25s ease-out;
+}
+
+.form .button:focus {
+  outline: 0.25rem solid var(--gray-color);
+}
+
+.form .button:active {
+  transform: scale(0.9);
+}
+
+.background-color > a:link,
+.background-color > a:visited {
+  color: var(--gray-color);
+}
+
+.background-color > h1 {
+  animation: fromDown 0.75s ease-out;
+}
+
+.campgrounds {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.campground {
+  border: 0.1rem solid var(--light-gray-color);
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  animation: fromDown 0.75s ease-out;
+}
+
+.campground img {
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.campground img,
+.campground h2,
+.campground p {
+  margin-bottom: 0.5rem;
+}
+
+.campground p {
+  color: var(--gray-color);
+}
+
+.campground a:link,
+.campground a:visited {
+  text-decoration: none;
+  color: var(--black-color);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border: 0.1rem solid var(--light-gray-color);
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+.footer {
+  width: 80%;
+  margin-inline: auto;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes fromDown {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
