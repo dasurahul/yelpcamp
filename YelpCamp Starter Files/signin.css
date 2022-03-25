@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --black-color: black;
+  --gray-color: gray;
+  --light-gray-color: #dddddd;
+  --very-light-gray-color: #eeeeee;
+  --background-color: #fff8f8;
+  --white-color: white;
+  --link-color: #00b7ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Archivo", sans-serif;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.header {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.header > div {
+  max-width: 40rem;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a:link,
+.header a:visited {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.main {
+  margin-top: 6rem;
+  width: 80%;
+  margin-inline: auto;
+}
+
+.main > div {
+  max-width: 40rem;
+}
+
+.main h1 {
+  margin-bottom: 2rem;
+}
+
+.form label,
+.form input {
+  display: block;
+}
+
+.form label {
+  color: var(--gray-color);
+  margin-bottom: 0.75rem;
+}
+
+.form input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: var(--very-light-gray-color);
+  margin-bottom: 1rem;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form .button {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.25s ease-out;
+  margin-bottom: 1rem;
+}
+
+.form .button:focus {
+  outline: 0.25rem solid var(--gray-color);
+}
+
+.form .button:active {
+  transform: scale(0.9);
+}
+
+.form p {
+  color: var(--gray-color);
+}
+
+.form p a:link,
+.form p a:visited {
+  color: var(--link-color);
+}
+
+.testimonial {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  background: var(--background-color);
+  display: grid;
+  place-items: center;
+  animation: fromRight 0.75s ease-out 1s;
+  animation-fill-mode: backwards;
+}
+
+.testimonial p {
+  max-width: 24ch;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.name {
+  font-weight: bold;
+}
+
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
