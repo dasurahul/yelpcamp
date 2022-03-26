@@ -86,6 +86,7 @@ p {
 
 .main h1 {
   margin-bottom: 2rem;
+  animation: fromDown 0.75s ease-out;
 }
 
 .form label,
@@ -139,4 +140,15 @@ p {
   height: 6rem;
   display: flex;
   align-items: center;
+}
+
+@keyframes fromDown {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
