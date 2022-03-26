@@ -81,6 +81,7 @@ p {
 .main {
   width: 40%;
   margin-inline: auto;
+  margin-block: 2rem;
 }
 
 .main h1 {
