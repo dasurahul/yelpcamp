@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --black-color: black;
+  --gray-color: gray;
+  --light-gray-color: #dddddd;
+  --very-light-gray-color: #eeeeee;
+  --background-color: #fff8f8;
+  --white-color: white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Archivo", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.header {
+  width: 80%;
+  margin-inline: auto;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header a:link,
+.header a:visited {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.header > div:first-child {
+  font-weight: bold;
+}
+
+.header .button:link,
+.header .button:visited {
+  text-decoration: none;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-weight: bold;
+  display: inline-block;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.25s ease-out;
+}
+
+.header .button:focus {
+  outline: 0.25rem solid var(--gray-color);
+}
+
+.header .button:active {
+  transform: scale(0.9);
+}
+
+.main {
+  width: 40%;
+  margin-inline: auto;
+}
+
+.main h1 {
+  margin-bottom: 2rem;
+}
+
+.form label,
+.form input {
+  display: block;
+}
+
+.form label {
+  color: var(--gray-color);
+  margin-bottom: 0.5rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: var(--very-light-gray-color);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+}
+
+.form .button {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.25s ease-out;
+  margin-bottom: 1rem;
+}
+
+.form .button:focus {
+  outline: 0.25rem solid var(--gray-color);
+}
+
+.form .button:active {
+  transform: scale(0.9);
+}
+
+.footer {
+  width: 80%;
+  margin-inline: auto;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
